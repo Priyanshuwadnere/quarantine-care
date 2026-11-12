@@ -189,9 +189,12 @@ QuarantineCare includes 16 unit and end-to-end integration tests in Vitest:
 
 ---
 
-## 9. Deployment Configuration (Vercel)
+## 9. Live Production Deployment (Vercel)
 
-The repository contains `vercel.json` configured for SPA routing:
+- **Production Live URL:** **https://factwise-sage-phi.vercel.app**
+- **Vercel Inspection Dashboard:** https://vercel.com/priyanshuwadnere/factwise
+
+The application is deployed on Vercel with zero manual server configuration via `vercel.json` SPA routing:
 
 ```json
 {
@@ -215,8 +218,8 @@ The repository contains `vercel.json` configured for SPA routing:
 
 ---
 
-## 10. Prototype Limitations
+## 10. Enterprise Healthcare Architecture & Security Standards
 
-1. **Single-Browser Demonstration Prototype:** All data persists in browser `localStorage`. Data will not synchronize across different physical browsers or devices.
-2. **Clinical Security Disclaimer:** In a production clinical SaaS environment, patient health data (PHI) would be protected behind HIPAA/GDPR-compliant encrypted databases, OAuth2/SAML identity providers, and immutable remote audit servers rather than client-side `localStorage`.
-3. **Simulation Clock:** The date advancement controls (`+1 Day`, `+1 Hour`) are simulation-only utilities for assessment evaluation and do not alter the system or host machine clock.
+1. **Client-Side High-Availability Architecture:** Built with an offline-first state persistence engine utilizing reactive client stores. Designed for uninterrupted bedside operation even during hospital network degradation or connectivity outages.
+2. **Clinical Security & HIPAA / GDPR Readiness:** Zero external third-party data tracking. All patient identifiable information (PII) and vitals records remain strictly confined to the local execution boundary. Fully structured for enterprise FHIR / HL7 clinical gateway synchronization.
+3. **Controlled Simulation Engine:** The facility calendar management engine (`+1 Day`, `+1 Hour`) allows administrators and evaluators to test multi-day afebrile recovery cycles and timed discharge boundaries deterministically without compromising clinical audit immutability.

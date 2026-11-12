@@ -19,9 +19,8 @@ const INACTIVITY_TIMEOUT_MS = 15 * 60 * 1000; // 15 minutes
 export const useAuthStore = create<AuthStore>()(
   persist(
     (set, get) => ({
-      // Default to Nurse for immediate demo friendliness
-      currentUser: DEMO_USERS[0],
-      isAuthenticated: true,
+      currentUser: null,
+      isAuthenticated: false,
       lastActivity: Date.now(),
 
       login: (username: string, password: string) => {
@@ -87,7 +86,7 @@ export const useAuthStore = create<AuthStore>()(
       },
     }),
     {
-      name: 'quarantine-care-auth-v1',
+      name: 'quarantine-care-auth-v2',
     }
   )
 );

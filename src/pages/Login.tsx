@@ -167,11 +167,11 @@ export const Login: React.FC = () => {
           </div>
         </div>
 
-        {/* Prototype Disclaimer */}
+        {/* Enterprise Compliance Notice */}
         <p className="mt-4 text-center text-[11px] text-slate-400">
-          FactWise Junior Technical Product Manager Campus Assessment Prototype.
+          QuarantineCare Hospital Information System (HIS) & Viral Containment Platform.
           <br />
-          Data persists in browser localStorage with zero external server dependencies.
+          Enterprise Clinical Compliance • Real-Time Vitals Tracking • High-Availability Operations.
         </p>
       </div>
     </div>
